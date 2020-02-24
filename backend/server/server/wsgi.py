@@ -36,3 +36,4 @@ try:
 
 except Exception as e:
     print("Exception while loading the algorithms to the registry,", str(e))
+

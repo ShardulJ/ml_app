@@ -3,13 +3,12 @@ from apps.endpoints.models import MLAlgorithm
 from apps.endpoints.models import MLAlgorithmStatus
 
 class MLRegistry:
-    
     def __init__(self):
         self.endpoints = {}
 
     def add_algorithm(self, endpoint_name, algorithm_object, algorithm_name,
-                    algorithm_status, algorithm_version, owner,
-                    algorithm_description, algorithm_code):
+                      algorithm_status, algorithm_version, owner,
+                      algorithm_description, algorithm_code):
         # get endpoint
         endpoint, _ = Endpoint.objects.get_or_create(name=endpoint_name, owner=owner)
 
